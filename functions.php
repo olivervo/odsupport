@@ -2,7 +2,7 @@
 /*
 Plugin Name: Olnhausen Design Support
 Description: Support och anpassad kod för din hemsida från Olnhausen Design. Behövs för att hemsidan skall fungera.
-Version: 0.3
+Version: 0.4
 License: GPL
 Author: Olnhausen Design
 Author URI: http://www.olnhausendesign.se
@@ -59,6 +59,40 @@ function hide_plugins($plugins)
 		}
 		return $plugins;
 }
+//Custom login logo
+function custom_login_logo() {
+	echo '
+		<style>
+			.login h1 a { background-image: url(https://static.olnhausendesign.se/branding/hotlink-ok/login-wp2x.png) !important; background-size: 295px 62px; width:295px; height:62px; display:block; }
+		</style>
+	';
+}
+add_action( 'login_head', 'custom_login_logo' );
+//Change login URL
+add_filter( 'login_headerurl', 'ec_login_headerurl' );
+function ec_login_headerurl( $url ) {
+return esc_url( home_url( '/' ) );
+}
+//Modify Admin Footer Text
+
+function modify_footer() {
+	echo 'Created with <span style="color: #cc0000;">&hearts;</span> in Stockholm by <a href="https://www.olnhausendesign.se" target="_blank">Olnhausen Design</a>';
+}
+add_filter( 'admin_footer_text', 'modify_footer' );
+
+//Create Custom WordPress Dashboard Widget
+
+function dashboard_widget_function() {
+	echo '
+		<p>Här i adminpanelen kan du göra ändringar på hemsidan. Klicka på "Sidor" här till höger för att se och redigera hemsidans olika sidor.</p>
+		<a href="https://www.olnhausendesign.se/support/" class="button button-primary customize load-customize hide-if-no-customize" target="_blank">Jag behöver hjälp</a>
+	';
+}
+
+function add_dashboard_widgets() {
+	wp_add_dashboard_widget( 'custom_dashboard_widget', 'Välkommen till er hemsida från Olnhausen Design', 'dashboard_widget_function' );
+}
+add_action( 'wp_dashboard_setup', 'add_dashboard_widgets' );
 
 //Hide panel widgets
 function remove_dashboard_widgets () {
@@ -138,5 +172,18 @@ add_action('init', 'df_disable_comments_admin_bar');
 
 // Remove post by email
 add_filter( 'enable_post_by_email_configuration', '__return_false' );
+
+// Change wp admin logo
+function wpb_custom_logo() {
+echo '
+<style type="text/css">
+#wp-admin-bar-wp-logo {
+display: none;
+}
+</style>
+';
+}
+//hook into the administrative header output
+add_action('wp_before_admin_bar_render', 'wpb_custom_logo');
 
 ?>
