@@ -1,6 +1,6 @@
 # odsupport
 v0.7
-test release
+Fixed auto update
 
 v0.6
 Added plugin auto update
