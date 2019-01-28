@@ -186,4 +186,14 @@ display: none;
 //hook into the administrative header output
 add_action('wp_before_admin_bar_render', 'wpb_custom_logo');
 
+//Plugin updating
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/olivervo/odsupport',
+	__FILE__,
+	'unique-plugin-or-theme-slug'
+);
+
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('master');
 ?>

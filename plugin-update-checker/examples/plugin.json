@@ -1,0 +1,17 @@
+{
+	"name": "Olnhausen Design Support",
+	"version": "0.5",
+	"download_url": "https://github.com/olivervo/odsupport/archive/master.zip",
+
+	"homepage": "https://www.olnhausendesign.se/",
+	"requires": "4.5",
+	"tested": "4.8",
+	"last_updated": "2019-01-28 16:17:00",
+	"upgrade_notice": "Here's why you should upgrade...",
+
+	"author": "Oliver von Olnhausen",
+	"author_homepage": "https://www.olnhausendesign.se/",
+
+	"sections": {
+		"description": "Support och anpassad kod för din hemsida från Olnhausen Design. Behövs för att hemsidan skall fungera.",
+	}
