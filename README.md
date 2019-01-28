@@ -1,4 +1,7 @@
 # odsupport
+v0.6
+Added plugin auto update
+
 v0.5
 Hidden admin logo
 
