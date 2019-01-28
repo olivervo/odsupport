@@ -191,7 +191,7 @@ require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/olivervo/odsupport',
 	__FILE__,
-	'unique-plugin-or-theme-slug'
+	'odsupport'
 );
 
 //Optional: Set the branch that contains the stable release.
