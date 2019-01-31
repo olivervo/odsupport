@@ -13,6 +13,8 @@ Hanteras endast av Olnhausen Design.
 Kontakta support@olnhausendesign.se för support.
 
 == Changelog ==
+v0.9 Added optimizations
+
 v0.8 Updated readme
 
 v0.7 Fixed auto update
