@@ -3,7 +3,7 @@ Requires at least: 4.3
 Tested up to: 5.0.3
 Requires PHP: 5.6
 
-Support och anpassad kod för din hemsida från Olnhausen Design. Behövs för att hemsidan skall fungera.
+Support och anpassad kod för din hemsida från Olnhausen Design.
 
 
 == Installation ==
@@ -13,6 +13,8 @@ Hanteras endast av Olnhausen Design.
 Kontakta support@olnhausendesign.se för support.
 
 == Changelog ==
+v1.0 Code optimizations to seperate php files
+
 v0.9 Added optimizations
 
 v0.8 Updated readme
