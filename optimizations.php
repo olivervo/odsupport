@@ -77,9 +77,6 @@ function crave_remove_jquery_migrate( &$scripts) {
 }
 add_action( 'wp_default_scripts', 'crave_remove_jquery_migrate' );
 
-/**
-* Remove junk from head
-*/
 // remove WordPress version number
 function crave_remove_version() {
 	return '';
