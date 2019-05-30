@@ -5,7 +5,7 @@ function crave_js_defer_attr($tag) {
 		return $tag;
 	}
 	// Do not add defer attribute to these scripts
-	$scripts_to_exclude = array('jquery.js, map.js, common.js'); // add a string of js file e.g. script.js
+	$scripts_to_exclude = array('jquery.js', 'map.js', 'common.js', 'util.js', 'js'); // add a string of js file e.g. script.js
 
 	foreach($scripts_to_exclude as $exclude_script) {
 		if (true == strpos($tag, $exclude_script ) )
