@@ -13,6 +13,8 @@ Hanteras endast av Olnhausen Design.
 Kontakta support@olnhausendesign.se för support.
 
 == Changelog ==
+v1.1 Fixed google map scripts
+
 v1.0 Code optimizations to seperate php files
 
 v0.9 Added optimizations
