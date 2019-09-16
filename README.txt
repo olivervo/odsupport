@@ -13,7 +13,7 @@ Hanteras endast av Olnhausen Design.
 Kontakta support@olnhausendesign.se för support.
 
 == Changelog ==
-v.1.2 Added password protected image and link
+v1.2 Added password protected image and link
 
 v1.1 Fixed google map scripts
 
