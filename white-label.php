@@ -176,4 +176,18 @@ display: none;
 }
 //hook into the administrative header output
 add_action('wp_before_admin_bar_render', 'wpb_custom_logo');
+
+//change password protected link to home
+function pp_edit_link () {
+	echo 'https://www.olnhausendesign.se';
+}
+function pp_text () {
+	echo '<p>Hemsidan är under uppbyggnad, ange lösenordet nedan eller kontakta <a href="mailto:support@olnhausendesign.se">support@olnhausendesign.se</a>.</p>';
+}
+function pp_image () {
+	echo '<style>.login h1 a {background-image: url(//static.olnhausendesign.se/branding/hotlink-ok/Rund-shadow.png)!important; background-size: auto 84px; overflow: visible;}</style>';
+}
+add_filter('password_protected_login_headerurl', 'pp_edit_link');
+add_action('password_protected_login_messages', 'pp_text');
+add_action('password_protected_login_head', 'pp_image');
 ?>

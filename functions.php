@@ -2,7 +2,7 @@
 /*
 Plugin Name: Olnhausen Design Support
 Description: Support och anpassad kod för din hemsida från Olnhausen Design. Behövs för att hemsidan skall fungera.
-Version: 1.1
+Version: 1.1.1
 License: GPL
 Author: Olnhausen Design
 Author URI: http://www.olnhausendesign.se
