@@ -99,4 +99,10 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
 remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0 ); // remove shortlink
 add_filter( 'revslider_meta_generator', 'remove_revslider_meta_tag' ); //remove rev slider meta
+
+//change action schedualer to purge after one week
+add_filter( 'action_scheduler_retention_period', 'wpb_action_scheduler_purge' );
+function wpb_action_scheduler_purge() {
+ return WEEK_IN_SECONDS;
+}
 ?>
