@@ -118,11 +118,11 @@ function wpb_action_scheduler_purge()
 add_filter('woocommerce_allow_marketplace_suggestions', '__return_false');
 
 //Remove avada post types
-function delete_post_type()
+/* function delete_post_type()
 {
 	unregister_post_type('avada_portfolio');
 	unregister_post_type('avada_faq');
 	unregister_taxonomy('faq-items');
 	unregister_taxonomy('portfolio-items');
 }
-add_action('init', 'delete_post_type', 9999, 0);
+add_action('init', 'delete_post_type', 9999, 0); */
