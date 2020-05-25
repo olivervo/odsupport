@@ -105,4 +105,6 @@ add_filter( 'action_scheduler_retention_period', 'wpb_action_scheduler_purge' );
 function wpb_action_scheduler_purge() {
  return WEEK_IN_SECONDS;
 }
-?>
+
+//Remove suggestions from woocommerce
+add_filter('woocommerce_allow_marketplace_suggestions', '__return_false');
