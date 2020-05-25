@@ -120,9 +120,11 @@ add_filter('woocommerce_allow_marketplace_suggestions', '__return_false');
 //Remove avada post types
 /* function delete_post_type()
 {
-	unregister_post_type('avada_portfolio');
-	unregister_post_type('avada_faq');
-	unregister_taxonomy('faq-items');
-	unregister_taxonomy('portfolio-items');
+  unregister_post_type( 'avada_portfolio' );
+  unregister_post_type( 'avada_faq' );
+  unregister_taxonomy( 'portfolio_category');
+  unregister_taxonomy( 'portfolio_tags');
+  unregister_taxonomy( 'portfolio_skills');
+  unregister_taxonomy( 'faq_category');
 }
 add_action('init', 'delete_post_type', 9999, 0); */
