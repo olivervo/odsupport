@@ -117,6 +117,17 @@ function wpb_action_scheduler_purge()
 //Remove suggestions from woocommerce
 add_filter('woocommerce_allow_marketplace_suggestions', '__return_false');
 
+//Disable automatic update email notifications
+add_filter('auto_core_update_send_email', 'wpb_stop_auto_update_emails', 10, 4);
+
+function wpb_stop_update_emails($send, $type, $core_update, $result)
+{
+	if (!empty($type) && $type == 'success') {
+		return false;
+	}
+	return true;
+}
+
 //Remove avada post types
 /* function delete_post_type()
 {
