@@ -13,6 +13,8 @@ Hanteras endast av Olnhausen Design.
 Kontakta support@olnhausendesign.se för support.
 
 == Changelog ==
+v1.3 Added auto updates and removed emails, removed themefusion news widget.
+
 v1.2 Added password protected image and link
 
 v1.1 Fixed google map scripts
