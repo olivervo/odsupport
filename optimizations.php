@@ -83,7 +83,7 @@ function crave_remove_jquery_migrate(&$scripts)
 }
 add_action('wp_default_scripts', 'crave_remove_jquery_migrate');
 
-// remove WordPress version number
+// Remove WordPress version number
 function crave_remove_version()
 {
 	return '';
@@ -117,19 +117,8 @@ function wpb_action_scheduler_purge()
 //Remove suggestions from woocommerce
 add_filter('woocommerce_allow_marketplace_suggestions', '__return_false');
 
-//Disable automatic update email notifications
-add_filter('auto_core_update_send_email', 'wpb_stop_auto_update_emails', 10, 4);
-
-function wpb_stop_update_emails($send, $type, $core_update, $result)
-{
-	if (!empty($type) && $type == 'success') {
-		return false;
-	}
-	return true;
-}
-
 //Remove avada post types
-/* function delete_post_type()
+function delete_post_type()
 {
   unregister_post_type( 'avada_portfolio' );
   unregister_post_type( 'avada_faq' );
@@ -138,4 +127,4 @@ function wpb_stop_update_emails($send, $type, $core_update, $result)
   unregister_taxonomy( 'portfolio_skills');
   unregister_taxonomy( 'faq_category');
 }
-add_action('init', 'delete_post_type', 9999, 0); */
+add_action('init', 'delete_post_type', 9999, 0);

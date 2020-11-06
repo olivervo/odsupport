@@ -4,7 +4,7 @@ function custom_toolbar() {
 	global $wp_admin_bar;
 
 	$args = array(
-		'title'  => 'Olnhausen Design Support',
+		'title'  => 'Support',
 		'href'   => 'http://www.olnhausendesign.se/support/',
 		'meta'   => array(
 			'target'   => '_blank',
@@ -65,14 +65,12 @@ function ec_login_headerurl( $url ) {
 return esc_url( home_url( '/' ) );
 }
 //Modify Admin Footer Text
-
 function modify_footer() {
 	echo 'Created with <span style="color: #cc0000;">&hearts;</span> in Stockholm by <a href="https://www.olnhausendesign.se" target="_blank">Olnhausen Design</a>';
 }
 add_filter( 'admin_footer_text', 'modify_footer' );
 
 //Create Custom WordPress Dashboard Widget
-
 function dashboard_widget_function() {
 	echo '
 		<p>Här i adminpanelen kan du göra ändringar på hemsidan. Klicka på "Sidor" här till höger för att se och redigera hemsidans olika sidor.</p>
@@ -87,23 +85,22 @@ add_action( 'wp_dashboard_setup', 'add_dashboard_widgets' );
 
 //Hide panel widgets
 function remove_dashboard_widgets () {
-
-  remove_meta_box('dashboard_quick_press','dashboard','side'); //Quick Press widget
-  remove_meta_box('dashboard_recent_drafts','dashboard','side'); //Recent Drafts
-  remove_meta_box('dashboard_primary','dashboard','side'); //WordPress.com Blog
-  remove_meta_box('dashboard_secondary','dashboard','side'); //Other WordPress News
-  remove_meta_box('dashboard_incoming_links','dashboard','normal'); //Incoming Links
-  remove_meta_box('dashboard_plugins','dashboard','normal'); //Plugins
-  remove_meta_box('dashboard_right_now','dashboard', 'normal'); //Right Now
-  remove_meta_box('rg_forms_dashboard','dashboard','normal'); //Gravity Forms
-  remove_meta_box('dashboard_recent_comments','dashboard','normal'); //Recent Comments
-  remove_meta_box('icl_dashboard_widget','dashboard','normal'); //Multi Language Plugin
-  remove_meta_box('dashboard_activity','dashboard', 'normal'); //Activity
-  remove_action('welcome_panel','wp_welcome_panel');
-  remove_meta_box( 'themefusion_news', 'dashboard', 'normal' ); // Theme Fusion
+	remove_meta_box('dashboard_quick_press','dashboard','side'); //Quick Press widget
+	remove_meta_box('dashboard_recent_drafts','dashboard','side'); //Recent Drafts
+	remove_meta_box('dashboard_primary','dashboard','side'); //WordPress.com Blog
+	remove_meta_box('dashboard_secondary','dashboard','side'); //Other WordPress News
+	remove_meta_box('dashboard_incoming_links','dashboard','normal'); //Incoming Link
+	remove_meta_box('dashboard_plugins','dashboard','normal'); //Plugins
+	remove_meta_box('dashboard_right_now','dashboard', 'normal'); //Right Now
+	remove_meta_box('rg_forms_dashboard','dashboard','normal'); //Gravity Forms
+	remove_meta_box('dashboard_recent_comments','dashboard','normal'); //Recent Comments
+	remove_meta_box('icl_dashboard_widget','dashboard','normal'); //Multi Language Plugins
+	remove_meta_box('dashboard_activity','dashboard', 'normal'); //Activity
+	remove_action('welcome_panel','wp_welcome_panel');
+	remove_meta_box('themefusion-news', 'dashboard', 'normal'); // Theme Fusion
+	remove_meta_box('dashboard_site_health', 'dashboard', 'normal');
 }
-
-add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
+add_action('do_meta_boxes', 'remove_dashboard_widgets');
 
 // Disable support for comments and trackbacks in post types
 function df_disable_comments_post_types_support() {

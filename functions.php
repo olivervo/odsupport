@@ -2,13 +2,14 @@
 /*
 Plugin Name: Olnhausen Design Support
 Description: Support och anpassad kod för din hemsida från Olnhausen Design. Behövs för att hemsidan skall fungera.
-Version: 1.2
+Version: 1.3
 License: GPL
 Author: Olnhausen Design
 Author URI: http://www.olnhausendesign.se
 */
 require 'white-label.php';
 require 'optimizations.php';
+require 'auto-updates.php';
 
 //Plugin updating
 require 'plugin-update-checker/plugin-update-checker.php';
